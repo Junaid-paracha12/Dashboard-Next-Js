@@ -33,7 +33,7 @@ export default function SideNavbar({}: Props) {
   return (
     <>
       <div className="hidden sm:grid fixed min-w-[80px] h-full border-r px-3  pt-7">
-      <h1 className="text-2xl">Logo</h1>
+      
         <div className="absolute right-0 top-7">
           {/* <Button
             onClick={toggleSidebar}
@@ -43,7 +43,9 @@ export default function SideNavbar({}: Props) {
             <ChevronRight />
           </Button> */}
         </div>
-        <div className="mt-7">
+        
+        <div className="">
+        <h1 className="text-2xl pb-8">Logo</h1>
         <Nav
           isCollapsed={isCollapsed}
           links={[

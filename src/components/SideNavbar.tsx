@@ -32,7 +32,7 @@ export default function SideNavbar({}: Props) {
   }
   return (
     <>
-      <div className="hidden sm:grid fixed min-w-[80px] border-r px-3  pt-7">
+      <div className="hidden sm:grid fixed min-w-[80px] h-full border-r px-3  pt-7">
       <h1 className="text-2xl">Logo</h1>
         <div className="absolute right-0 top-7">
           {/* <Button

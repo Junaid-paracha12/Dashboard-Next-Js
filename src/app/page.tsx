@@ -78,11 +78,12 @@ export default function Home() {
         ))}
       </section>
       <section className="grid grid-cols-1  gap-4 transition-all lg:grid-cols-2">
-        <CardContent>
+        <div className="h-2/5">
+        <CardContent >
           <p className="p-4 font-semibold">Overview</p>
 
           <BarChart />
-        </CardContent>
+        </CardContent></div>
         <CardContent className="flex justify-between gap-4">
           <section>
             <p>Recent Sales</p>

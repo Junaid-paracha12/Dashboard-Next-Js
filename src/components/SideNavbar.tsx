@@ -82,21 +82,21 @@ export default function SideNavbar({}: Props) {
               label: "23",
               icon: ArchiveX,
               variant: "ghost",
-              href: "/",
+              href: "/junk",
             },
             {
               title: "Trash",
               label: "",
               icon: Trash2,
               variant: "ghost",
-              href: "/",
+              href: "/trash",
             },
             {
               title: "Archive",
               label: "",
               icon: Archive,
               variant: "ghost",
-              href: "/",
+              href: "/archive",
             },
           ]}
         /></div>
@@ -145,21 +145,21 @@ export default function SideNavbar({}: Props) {
                     label: "23",
                     icon: ArchiveX,
                     variant: "ghost",
-                    href: "/",
+                    href: "/junk",
                   },
                   {
                     title: "Trash",
                     label: "",
                     icon: Trash2,
                     variant: "ghost",
-                    href: "/",
+                    href: "/trash",
                   },
                   {
                     title: "Archive",
                     label: "",
                     icon: Archive,
                     variant: "ghost",
-                    href: "/",
+                    href: "/archive",
                   },
                 ]}
               />

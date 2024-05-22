@@ -1,4 +1,6 @@
 import React from "react";
+// import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 
 export type SalesProps = {
   name: string;
@@ -17,6 +19,11 @@ export default function SalesCard(props: SalesProps) {
             src={`https://api.dicebear.com/7.x/lorelei/svg?seed=${props.name}`}
             alt="avatar"
           />
+          {/* <Avatar>
+  <AvatarImage src={`https://github.com/shadcn.png?seed=${props.name}`} />
+  <AvatarFallback>CN</AvatarFallback>
+</Avatar> */}
+
         </div>
         <div className="text-sm">
           <p>{props.name}</p>

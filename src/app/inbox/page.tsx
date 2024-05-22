@@ -1,151 +1,132 @@
+import  { CardContent } from "@/components/Card";
+import MailCard, { MailProps } from "@/components/MailCard";
 
-"use client";
-
-import { DataTable } from "@/components/DataTable";
 import Pagetitle from "@/components/Pagetitle";
-import { ColumnDef } from "@tanstack/react-table";
-import React from "react";
+import { MagnetIcon, Search } from "lucide-react";
 
 
 
-type Payment = {
-  name: string;
-  email: string;
-  lastOrder: string;
-  method: string;
-};
 
-const columns: ColumnDef<Payment>[] = [
-  {
-    accessorKey: "name",
-    header: "Name",
-    cell: ({ row }) => {
-      return (
-        <div className="flex gap-2 items-center">
-          <img
-            className="h-10 w-10"
-            src={`https://api.dicebear.com/7.x/lorelei/svg?seed=${row.getValue(
-              "name"
-            )}`}
-            alt="user-image"
-          />
-          <p>{row.getValue("name")} </p>
-        </div>
-      );
+
+export default function Inbox()  {  
+  const MailData: MailProps[] = [
+    {
+      name: "Olivia Martin",
+      heading:"Metting",
+      date:"2 Month ago",
+      mail: "hi!I'm Writing this mail to inform you about the meatiing we have tommaro",
+      btn1:"metting",
+      btn2:"work",
+      btn3:"important"
+    },
+    {
+      name: "Chris Martinez",
+      heading: "Training Session",
+      date: "3 Days ago",
+      mail: "There will be a training session on the new software next Monday.",
+      btn1: "training",
+      btn2: "session",
+      btn3: "software"
+    },
+    {
+      name: "Isabella Anderson",
+      heading: "Office Renovation",
+      date: "2 Days ago",
+      mail: "The office renovation will start next week. Please plan accordingly.",
+      btn1: "office",
+      btn2: "renovation",
+      btn3: "notice"
+    },
+    {
+      name: "Daniel Lee",
+      heading: "New Hire Orientation",
+      date: "1 Day ago",
+      mail: "We have a new hire orientation tomorrow at 10 AM.",
+      btn1: "orientation",
+      btn2: "new hire",
+      btn3: "HR"
+    },
+    {
+      name: "Mia Clark",
+      heading: "Annual Report",
+      date: "Today",
+      mail: "The annual report is ready for your review.",
+      btn1: "report",
+      btn2: "annual",
+      btn3: "review"
+    },
+    {
+      name: "Ethan Lewis",
+      heading: "Security Update",
+      date: "2 Hours ago",
+      mail: "Please install the latest security update as soon as possible.",
+      btn1: "security",
+      btn2: "update",
+      btn3: "tech"
+    },
+    {
+      name: "Ava Walker",
+      heading: "Marketing Strategy",
+      date: "1 Hour ago",
+      mail: "Attached is the new marketing strategy document.",
+      btn1: "marketing",
+      btn2: "strategy",
+      btn3: "document"
+    },
+    {
+      name: "James Hall",
+      heading: "Website Redesign",
+      date: "30 Minutes ago",
+      mail: "We need to discuss the website redesign in our next meeting.",
+      btn1: "website",
+      btn2: "redesign",
+      btn3: "meeting"
+    },
+    {
+      name: "Charlotte Allen",
+      heading: "Policy Reminder",
+      date: "15 Minutes ago",
+      mail: "This is a reminder to adhere to the new company policies.",
+      btn1: "policy",
+      btn2: "reminder",
+      btn3: "company"
     }
-  },
-  {
-    accessorKey: "email",
-    header: "Email"
-  },
-  {
-    accessorKey: "lastOrder",
-    header: "Last Order"
-  },
-  {
-    accessorKey: "method",
-    header: "Method"
-  }
-];
-
-const data: Payment[] = [
-  {
-    name: "John Doe",
-    email: "john@example.com",
-    lastOrder: "2023-01-01",
-    method: "Credit Card"
-  },
-  {
-    name: "Alice Smith",
-    email: "alice@example.com",
-    lastOrder: "2023-02-15",
-    method: "PayPal"
-  },
-  {
-    name: "Bob Johnson",
-    email: "bob@example.com",
-    lastOrder: "2023-03-20",
-    method: "Stripe"
-  },
-  {
-    name: "Emma Brown",
-    email: "emma@example.com",
-    lastOrder: "2023-04-10",
-    method: "Venmo"
-  },
-  {
-    name: "Michael Davis",
-    email: "michael@example.com",
-    lastOrder: "2023-05-05",
-    method: "Cash"
-  },
-  {
-    name: "Sophia Wilson",
-    email: "sophia@example.com",
-    lastOrder: "2023-06-18",
-    method: "Bank Transfer"
-  },
-  {
-    name: "Liam Garcia",
-    email: "liam@example.com",
-    lastOrder: "2023-07-22",
-    method: "Payoneer"
-  },
-  {
-    name: "Olivia Martinez",
-    email: "olivia@example.com",
-    lastOrder: "2023-08-30",
-    method: "Apple Pay"
-  },
-  {
-    name: "Noah Rodriguez",
-    email: "noah@example.com",
-    lastOrder: "2023-09-12",
-    method: "Google Pay"
-  },
-  {
-    name: "Ava Lopez",
-    email: "ava@example.com",
-    lastOrder: "2023-10-25",
-    method: "Cryptocurrency"
-  },
-  {
-    name: "Elijah Hernandez",
-    email: "elijah@example.com",
-    lastOrder: "2023-11-05",
-    method: "Alipay"
-  },
-  {
-    name: "Mia Gonzalez",
-    email: "mia@example.com",
-    lastOrder: "2023-12-08",
-    method: "WeChat Pay"
-  },
-  {
-    name: "James Perez",
-    email: "james@example.com",
-    lastOrder: "2024-01-18",
-    method: "Square Cash"
-  },
-  {
-    name: "Charlotte Carter",
-    email: "charlotte@example.com",
-    lastOrder: "2024-02-22",
-    method: "Zelle"
-  },
-  {
-    name: "Benjamin Taylor",
-    email: "benjamin@example.com",
-    lastOrder: "2024-03-30",
-    method: "Stripe"
-  }
-];
-
-export default function UsersPage({}: Payment) {
+    
+  ];
   return (
-    <div className="flex flex-col gap-5  w-full">
-      <Pagetitle title="Users" />
-      <DataTable columns={columns} data={data} />
+    <>
+    <div className="grid grid-cols-2">
+      <div>
+       
+        <div>
+        <Pagetitle title="Inbox" />
+        </div>
+        <div className="py-4 w-full relative">
+          <input placeholder="Search" className="w-full p-2 pl-10" />
+          
+          <span className="absolute top-6 left-2"><Search /></span>
+        </div>
+        <div className="">
+        <div className="flex flex-col gap-4">
+       
+          {MailData.map((d, i) => (
+            <MailCard
+              key={i}
+              mail={d.mail}
+              name={d.name}
+              heading={d.heading}
+              date={d.date}
+              btn1={d.btn1}
+              btn2={d.btn2}
+              btn3={d.btn3}
+            />
+          ))}
+        </div>
+        </div>
+      </div>
+      <div></div>
     </div>
+    </>
   );
 }
+

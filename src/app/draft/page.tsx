@@ -4,6 +4,7 @@
 import { DataTable } from "@/components/DataTable";
 import Pagetitle from "@/components/Pagetitle";
 import { ColumnDef } from "@tanstack/react-table";
+import Image from "next/image";
 import React from "react";
 
 
@@ -22,7 +23,7 @@ const columns: ColumnDef<Payment>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex gap-2 items-center">
-          <img
+          <Image
             className="h-10 w-10"
             src={`https://api.dicebear.com/7.x/lorelei/svg?seed=${row.getValue(
               "name"
